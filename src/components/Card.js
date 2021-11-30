@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import PropTypes from 'prop-types';
+
 function Card(props) {
 	const { card } = props;
 
@@ -11,6 +14,14 @@ function Card(props) {
 			</div>
 		</div>
 	)
+}
+
+Card.propTypes = {
+	data: PropTypes.shape({
+    title: PropTypes.string,
+		text: PropTypes.string,
+		btn: PropTypes.string
+  })
 }
 
 export default Card;
